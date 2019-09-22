@@ -76,7 +76,7 @@ router.post('/users', async (req,res)=>{//to add data .post
         const token = await user.generateAuthToken()
         res.status(201).send({user,token})
     }catch(e){
-        res.status(400).send(e)
+        res.status(401).send(e)
     }
 //     express handlers
 //     user.save().then(()=>{

@@ -1,14 +1,16 @@
-const express = require('express')
-require('./db/mongoose2')
-const TaskRouter = require('./routers/Tasks')// import from router file
-const UserRouter = require('./routers/Users')
+const app = require('./app')//providing the app file to require all the below data(in comment lines)
 //
-const app = express()
+// This data is imported from app file 
+// const express = require('express')
+// require('./db/mongoose2')
+// const TaskRouter = require('./routers/Tasks')// import from router file
+// const UserRouter = require('./routers/Users')
+// const app = express()
+// app.use(express.json())
+// app.use(UserRouter)// Using router data
+// app.use(TaskRouter)
+//
 const port = process.env.PORT// providing port to run
-//
-app.use(express.json())
-app.use(UserRouter)// Using router data
-app.use(TaskRouter)
 //
 app.listen(port, ()=>{
     console.log('server is on port ' + port)
